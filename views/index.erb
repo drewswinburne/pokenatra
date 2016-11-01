@@ -1,0 +1,11 @@
+<h1>Current Trainers</h1>
+
+
+<h2><a href="/trainer/new">Add a Trainer!</a></h2>
+  <% @trainer.each do |trainer| %>
+  <div class="pokemon">
+    <img class="pokepic" src="<%= trainer.img_url%>">
+      <h2><a href="/trainer/<%= trainer.id %>"><%= trainer.name %></a></h2>
+      <h3>Level <%= trainer.level %></h3>
+    </div>
+      <% end %>

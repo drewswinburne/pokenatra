@@ -1,0 +1,23 @@
+<div class="containareon">
+
+<img src="<%= @trainer.img_url %>">
+<p>Name: <%= @trainer.name %></p>
+<p>Level: <%= @trainer.level %></p>
+
+</div>
+<h2><a href="/pokemon/<%= @trainer.id %>/new">Add a Pokemon!</a></h2>
+
+<% @trainer.pokemon.sort {|x,y| x.id <=> y.id}.each do |pokemon| %>
+  <div class="pokemon">
+      <img class="pokepic" src="<%= pokemon.img_url%>">
+        <h2><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></h2>
+
+  <table>
+    <p><a href="/pokemon/<%= pokemon.id %>/edit">Edit</a></p>
+  </table>
+
+  </div>
+
+
+  </div>
+<% end %>
