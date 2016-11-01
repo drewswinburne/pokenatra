@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pokenatra!</title>
+</head>
+<body>
+<h2><a href="/pokemon/new">Add a Pokemon!</a></h2>
+  <% @pokemon.each.sort {|x,y| x.id <=> y.id}.each do |pokemon| %>
+  <div class="pokemon">
+    <img class="pokepic" src="<%= pokemon.img_url%>">
+      <h2><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></h2>
+
+<table>
+  <p><a href="/pokemon/<%= pokemon.id %>/edit">Edit</a></p>
+</table>
+
+</div>
+    <% end %>
+</body>
+</html>

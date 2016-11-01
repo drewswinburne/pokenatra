@@ -1,0 +1,29 @@
+
+
+<div class="containareon">
+  <h2><%= @pokemon.name %></h2>
+  <img src="<%= @pokemon.img_url%>">
+<table width=100%>
+<tr>
+<td><h3>CP:</h3><%= @pokemon.cp%></td>
+
+<td><h3>Poke-type:</h3><%= @pokemon.poke_type.upcase %></td>
+</tr>
+<tr>
+  <td>
+    <h3>HP:</h3>
+  </td>
+  <td>
+    <h3>Attack/Defense:</h3>
+  </td>
+</tr>
+</table>
+</div>
+
+<div class="containareon">
+  <form action="/pokemon/<%= @pokemon.id%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+
+  <p><input type="submit" value="delete this pokemon"></p>
+</form>
+</div>

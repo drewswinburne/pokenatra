@@ -1,4 +1,4 @@
-/*
+
 
 Uncomment for sick pokestyle
 
@@ -15,12 +15,18 @@ a, p, h2, h3 {
   border-radius: 100px;
 }
 
+.pokepic {
+  float:right;
+  height: 200px;
+  width: 200px;
+  margin-right: 100px;
+}
 
 body {
   background-image: url(../images/pokedex.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  font-family: "Pokemon", monospace;
+  font-family: "Pokemon", sans-serif;;
   letter-spacing: .25em;
   font-size: 200%;
 }
@@ -32,8 +38,8 @@ a:hover {
 .containareon, h1 {
   box-sizing: border-box;
   padding: 10px;
-  width: 50%;
-  margin: auto;
+  width: 60%;
+  margin: 20px auto;
   background-color: rgba(255, 255, 255, .8);
   text-align: center;
   justify-content: center;
@@ -41,6 +47,7 @@ a:hover {
 
 .pokemon{
   min-width: 375px;
+  height: 300px;
   background-color: rgb(255, 255, 255);
   padding: 10px;
   margin: 40px;
@@ -70,4 +77,9 @@ a:hover {
     text-shadow: 4px 4px 3px rgba(255, 0, 0, .3);
     background-color: rgba(0, 0, 0, .1);
   }
-}*/
+}
+
+table {
+text-align: center;
+margin: 0 auto;
+}

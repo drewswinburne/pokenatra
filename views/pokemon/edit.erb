@@ -1,0 +1,21 @@
+<div class="containareon">
+  <img src="<%= @pokemon.img_url%>">
+</div>
+
+<div class="pokemon">
+<form action="/pokemon/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <table>
+  <tr>
+  <td>
+<input type="text" name="pokemon[name]" value="<%= @pokemon.name %>"></td></tr>
+<td><input type="text" name="pokemon[cp]" value="<%= @pokemon.cp %>"></td></tr>
+<td><input type="text" name="pokemon[poke_type]" value="<%= @pokemon.poke_type %>"></td></tr>
+<td><input type="text" name="pokemon[img_url]" value="<%= @pokemon.img_url %>"></td></tr>
+<td><input type="submit"></td></tr>
+<td></td>
+</tr>
+</table>
+</form>
+
+</div>
